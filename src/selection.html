@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>藏品甄选</title>
+  <link rel="stylesheet" href="./static/css/reset.css">
+  <link rel="stylesheet" href="./static/css/main.css">
+  <link rel="stylesheet" href="./static/css/swiper-4.3.5.min.css">
+</head>
+<body>
+  @@include('header.html',{
+    "title": "header"
+  })
+
+  <section class="layout">
+
+    <!-- 藏品甄选 -->
+    <div class="tit clearfix">
+      <h3>藏品甄选 / Collection selection</h3>
+      <p class="fr">您在的位置：首页 > 藏品甄选 ></p>
+    </div>
+    <div class="sel">
+      <div class="sel-title"><h2>甄选流程</h2></div>
+      <ul>
+        <li>
+          <div class="process-l"><h2>01</h2></div>
+          <div class="process-r">
+            <p>通常情况下，本网接受实物市场评估价格与照片评估价格两种认证方式，但照片存在一定程度的视觉误差，因此强烈建议藏友带实物到此作评估分析。</p>
+          </div>
+        </li>
+        <li>
+          <div class="process-l"><h2>02</h2></div>
+          <div class="process-r">
+            <p>网上或通讯来源的照片，预计收到照片信息的1-3个小时内回复。</p>
+          </div>
+        </li>
+        <li>
+          <div class="process-l"><h2>03</h2></div>
+          <div class="process-r">
+            <p>正常工作时间为 周一到周日9：00-18：00时，鉴定请先联系本部门负责人<br>
+                来电咨询: 400-865-5590。</p>
+          </div>
+        </li>
+        <li>
+          <div class="process-l"><h2>04</h2></div>
+          <div class="process-r">
+            <p>我们收到客户的鉴定照片后，如符合鉴定条件，将安排相关专家进行初步鉴定，并在1-3个小时由工作人员和您取得联系。</p>
+          </div>
+        </li>
+        <li>
+          <div class="process-l"><h2>05</h2></div>
+          <div class="process-r">
+            <p>我们尊重并保护所有客户的个人隐私权，客户的个人信息未经客户亲自许可，
+                我们不得泄露给第三方。</p>
+          </div>
+        </li>
+      </ul>
+      <div class="sel-title"><h2>甄选范围</h2></div>
+      <div class="sel-range">
+        <h3>一、瓷器 工艺品：瓷器、玉器、明清家具、竹木漆犀角器、佛家造像等</h3>
+        <p>自2011年春季推出工艺品专场以来，业务发展迅速，持续保持高档水准， 首创多长不同门类艺术品的专场品鉴会，起到了引领市场走向的作用，
+            今年来，中国嘉德瓷器工艺品部的业务水平不仅得到业内人士广泛肯定，也迈入了国际先进行列。</p>
+        <h3>二、中国油画 雕塑：油画、雕塑、当代艺术、影像艺术等</h3>
+        <p>油画雕塑业务项目之一。无论是中国老一辈油画家的早年力作，还是当代艺术家的新锐作品，在上海乾德都有优秀的成交成绩。</p>
+        <h3>三、古籍善本 碑帖书法：初期书籍、历代典籍、碑帖、佛教典籍及印刷品等</h3>
+        <p>齐聚历史文物性、学术资料性和艺术代表性的古籍善本近几年在中国 的收藏市场占据着举足轻重的地位，也在中国各市场占据了相当的成交份额， 
+          自2008年以来众多沉寂民间的古籍善本寻得的新的归宿，赢得社会各界的广泛赞誉。</p>
+        <h3>四、邮品、钱币、铜镜：邮品、铜镜、纸币、青铜器</h3>
+        <p>作为历史变迁的见证，邮品、钱币、铜镜、青铜器在收藏品市场始终占据着一定地位，2010年以来多次举办包含邮品、 钱币、铜镜等类项在内众多
+            品鉴会，使众多爱好者在中低价位的藏品中找到了收藏的乐趣，为爱好者提供了更为广阔的收藏空间。</p>
+        <h3>五、珠宝、翡翠、钟表：翡翠、钻石等各类珠宝、钟表</h3>
+        <p>珠宝、翡翠、钟表以其独特价值及寓意成为近些年收藏市场的新贵，2010年秋面向上内外广泛瑰集高品质、有特色的珠宝翡翠饰品。多年来，设计
+            新颖、 品质优异的珠宝翡翠深受收藏者的关注和喜爱，屡有成交佳绩。并且以科学技术鉴定为基础，珠宝翡翠蕴含的现实价值和长期增值潜力，也
+            受到广大收藏者的肯定。 2011年开始，珠宝、翡翠与钟表项目联手，期望合力打造全新平台，为收藏家提供更为周到、专业的服务</p>
+      </div>
+    </div>
+
+    <div class="boutique">
+      <div class="bout-con-tag">
+        <span>猜你喜欢</span>
+        <a class="fr" href="#">返回展厅列表</a>
+      </div>
+      <div class="bout-item" id="bout-con-item">
+        <div class="bd">
+          <ul class="clearfix">
+            <li class="active">
+              <a href="bout-con.html">
+                <img src="./static/images/ex-img.jpg" alt="">
+                <div class="ex-contro">
+                  <h3>双辅首铜香炉</h3>
+                  <p>委托价：50万</p>
+                  <p>浏览量：5362次</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="./static/images/ex-img.jpg" alt="">
+                <div class="ex-contro">
+                  <h3>双辅首铜香炉</h3>
+                  <p>委托价：50万</p>
+                  <p>浏览量：5362次</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="./static/images/ex-img.jpg" alt="">
+                <div class="ex-contro">
+                  <h3>双辅首铜香炉</h3>
+                  <p>委托价：50万</p>
+                  <p>浏览量：5362次</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="./static/images/ex-img.jpg" alt="">
+                <div class="ex-contro">
+                  <h3>双辅首铜香炉</h3>
+                  <p>委托价：50万</p>
+                  <p>浏览量：5362次</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="./static/images/ex-img.jpg" alt="">
+                <div class="ex-contro">
+                  <h3>双辅首铜香炉</h3>
+                  <p>委托价：50万</p>
+                  <p>浏览量：5362次</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="./static/images/ex-img.jpg" alt="">
+                <div class="ex-contro">
+                  <h3>双辅首铜香炉</h3>
+                  <p>委托价：50万</p>
+                  <p>浏览量：5362次</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  @@include('footer.html',{
+    "title": "footer"
+  })
+</body>
+</html>

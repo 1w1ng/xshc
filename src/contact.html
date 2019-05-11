@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>联系我们</title>
+  <link rel="stylesheet" href="./static/css/reset.css">
+  <link rel="stylesheet" href="./static/css/main.css">
+  <link rel="stylesheet" href="./static/css/swiper-4.3.5.min.css">
+</head>
+<body>
+  @@include('header.html',{
+    "title": "header"
+  })
+
+  <section class="layout">
+
+    <!-- 联系我们 -->
+    <div class="tit clearfix">
+      <h3>联系我们 / Contact us</h3>
+      <p class="fr">您在的位置：首页 > 联系我们 > </p>
+    </div>
+    <div class="contact">
+      <p style="text-indent: 2em;">武汉旭升汇诚信息科技有限公司是一个集艺术品甄选、鉴赏、拍卖、展览、展销、交易等服务为一体的综合性公司。本公司秉持公平、公正、公开的原则，以诚信、守信、共赢为本，针对广大客户建立一个新的，最安全可靠的交易平台。</p>
+      <p>公司名称：武汉旭升汇诚信息科技有限公司</p>
+      <p>公司电话：18942942617</p>
+      <p>公司地址：湖北省武汉市洪山区高新二路22号中国光谷云计算海外高新企业孵化中心1号楼2303室</p>
+      <p>公司邮箱：3266797296@qq.com</p>
+      <div class="t15"></div>
+      <!--引用百度地图API-->
+      <style type="text/css">
+      html,body{margin:0;padding:0;}
+      .iw_poi_title {color:#CC5522;font-size:14px;font-weight:bold;overflow:hidden;padding-right:13px;white-space:nowrap}
+      .iw_poi_content {font:12px arial,sans-serif;overflow:visible;padding-top:4px;white-space:-moz-pre-wrap;word-wrap:break-word}
+      </style>
+      <script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+      <!--百度地图容器-->
+      <div style="width:1200px;height:429px;" id="dituContent"></div>
+      <div class="contact-form">
+        <div class="contact-form-con1">
+          <h3>藏友留言</h3>
+          <form action="">
+            <div><label for="">您的姓名</label><input type="text" placeholder="请输入您的姓名"></div>
+            <div><label for="">您的电话</label><input type="text" placeholder="请输入您的手机号"></div>
+            <textarea name="" id="" cols="30" rows="10" placeholder="请输入您的留言，我们会第一时间处理您的留言......"></textarea>
+            <a href="#">提交</a>
+          </form>
+        </div>
+        <div class="contact-form-con2">
+          <h3>立即申请免费在线鉴定</h3>
+          <h3>1小时快速鉴定出藏品的价值</h3>
+          <form action="">
+            <div><label for="">您的姓名</label><input type="text"></div>
+            <div><label for="">您的电话</label><input type="text"></div>
+            <div><label for="">藏品类型</label><input type="text" placeholder="请输入藏品名称"></div>
+            <a href="#">提交</a>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  @@include('footer.html',{
+    "title": "footer"
+  })
+  <script>
+    // 地圖插件
+    //创建和初始化地图函数：
+    function initMap(){
+      createMap();//创建地图
+      setMapEvent();//设置地图事件
+      addMapControl();//向地图添加控件
+      
+    }
+
+    //创建地图函数：
+    function createMap(){
+      var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
+      var point = new BMap.Point(114.428677,30.483188);//定义一个中心点坐标
+      map.centerAndZoom(point,18);//设定地图的中心点和坐标并将地图显示在地图容器中
+      var marker = new BMap.Marker(point);        // 创建标注    
+      map.addOverlay(marker);                     // 将标注添加到地图中 
+      window.map = map//将map变量存储在全局
+    }
+
+    //地图事件设置函数：
+    function setMapEvent(){
+      map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+      map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+      map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+      map.enableKeyboard();//启用键盘上下左右键移动地图
+    }
+
+    //地图控件添加函数：
+    function addMapControl(){
+      //向地图中添加缩放控件
+      var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+      map.addControl(ctrl_nav);
+            //向地图中添加缩略图控件
+      var ctrl_ove = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:1});
+      map.addControl(ctrl_ove);
+            //向地图中添加比例尺控件
+      var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+      map.addControl(ctrl_sca);
+    }
+
+    initMap();//创建和初始化地图
+  </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>搜索页面</title>
+  <link rel="stylesheet" href="./static/css/reset.css">
+  <link rel="stylesheet" href="./static/css/main.css">
+  <link rel="stylesheet" href="./static/css/swiper-4.3.5.min.css">
+</head>
+<body>
+  @@include('header.html',{
+    "title": "header"
+  })
+
+  <section class="layout">
+
+    <!-- 搜索页面 -->
+    <div class="tit clearfix">
+      <h3>搜索页面</h3>
+      <p class="fr">您在的位置：首页 > 搜索页面 ></p>
+    </div>
+    <div class="boutique">
+      <div class="bout-item">
+        <ul class="clearfix">
+          <li>
+            <a href="bout-con.html">
+              <img src="./static/images/ex-img.jpg" alt="">
+              <div class="ex-contro">
+                <h3>双辅首铜香炉</h3>
+                <p>委托价：50万</p>
+                <p>浏览量：5362次</p>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </section>
+
+  @@include('footer.html',{
+    "title": "footer"
+  })
+</body>
+</html>
